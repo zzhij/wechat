@@ -1,0 +1,65 @@
+/* pages/play/index.wxss */
+.container {
+  background: url(https://p4.music.126.net/Q-ZW3E-joRQTKqPTBdJqAg==/109951163167733782.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  /* transform: scale(1.5); */
+  transform-origin: center top;
+  background-attachment: fixed
+}
+.play-box {
+  position: relative;
+  width: 500rpx;
+  height: 500rpx;
+  z-index: 1;
+  box-sizing: border-box;
+  margin: 20rpx auto;
+}
+@keyframes rotate{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(359deg)}
+}
+.play-panel {
+  width: 500rpx;
+  height: 500rpx;
+  background: url(https://s3.music.126.net/m/s/img/disc.png?d3bdd1080a72129346aa0b4b4964b75f) no-repeat;
+  background-size: auto 100%; 
+  z-index: 10;
+  position: absolute;
+}
+.play-auto {
+  animation: rotate 3s linear infinite;
+}
+.play-panel view {
+  width: 500rpx;
+  height: 500rpx;
+  background: url(https://s3.music.126.net/m/s/img/disc_light.png?2bb24f3fd11569809b817b4988f12bc7) no-repeat;
+  background-image: url(https://s3.music.126.net/m/s/img/disc_light-ip6.png?996fc8a2bc62e1ab3f51f135fc459577);
+  background-size: auto 100%; 
+}
+.play-cover {
+  width: 500rpx;
+  height: 500rpx;
+  position: absolute;
+  z-index: 0;
+  border-radius: 500rpx;
+  overflow: hidden;
+  padding: 50rpx;
+  box-sizing: border-box;
+}
+.play-cover image {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 500rpx;
+}
+
+/* 播放控制区 */
+.play-control {
+  text-align: center;
+}
+.play-control image {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 30rpx auto;
+}

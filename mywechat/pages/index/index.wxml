@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class='container'>
+  <swiper indicator-dots="{{indicatorDots}}" style='height:{{swiperHeight}}' class='swiper-box' autoplay="{{autoplay}}">
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item class="swiper-item">
+        <image wx:if="{{index == 0}}" src="{{item}}" class="slide-image" bindload="imageLoad" width="100%" mode='widthFix'/>
+        <image wx:else src="{{item}}" class="slide-image" width="100%" mode='widthFix'/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='radio'>
+    <text class='radio-text'>电台</text>
+    <view class='radio-list'>
+      <view class='radio-single'>
+        <navigator url='/pages/play/index'>
+          <image class='radio-single-bg'  src='https://y.gtimg.cn/music/photo/radio/track_radio_199_13_1.jpg' mode='widthFix'></image>
+          <text class='radio-single-text'>热歌</text>
+          <view class='radio-single-play'></view>
+          <view class='radio-single-play'>
+            <image src='./../../image/list_sprite.png' mode='widthFix'></image>
+          </view>
+        </navigator>
+      </view>
+      <view class='radio-single'>
+        <navigator url='/pages/play/index'>
+          <image class='radio-single-bg' src='https://y.gtimg.cn/music/photo/radio/track_radio_307_13_1.jpg' mode='widthFix'></image>
+          <text class='radio-single-text'>一人一首招牌歌</text>
+          <view class='radio-single-play'>
+            <image src='./../../image/list_sprite.png' mode='widthFix'></image>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+

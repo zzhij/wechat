@@ -1,0 +1,72 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/* 新样式 */
+.swiper-box {
+  width: 750rpx;
+}
+.swiper-item {
+  text-align: center;
+}
+.swiper-box image {
+  width: 750rpx;
+}
+
+/* 电台 */
+.radio {
+  display: block;
+  width: 100%;
+}
+.radio-text {
+  display: block;
+  padding: 10rpx 20rpx;
+}
+.radio-list {
+  display: flex;
+  margin: 0 10px;
+}
+.radio-single {
+  position: relative;
+  width: 50%;
+  margin: 10rpx;
+  background: #fff;
+}
+.radio-single image.radio-single-bg{
+  width: 100%;
+}
+.radio-single-text {
+  display: block;
+  font-size: 14px;
+  margin: 20rpx 10rpx;
+}
+.radio-single-play {
+  z-index: 10;
+  position: absolute;
+  right: 20rpx;
+  top: 268rpx;
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+}
+.radio-single-play image {
+  width: 24px;
+}

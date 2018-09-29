@@ -1,0 +1,19 @@
+<!--pages/play/index.wxml-->
+<view class="container">
+  <view class='play'>
+    <view class='play-box'>
+      <view class='play-cover {{playRotate}}'>
+        <image src='http://p2.music.126.net/oVJmUJ1bPb_9eBOFCKLclQ==/109951163167730852.jpg' mode='scaleToFill'></image>
+      </view>
+      <view class='play-panel'>
+        <view class='{{playRotate}}'></view>
+      </view>
+    </view>
+    <view class='play-control'>
+      <image bindtap='playControl' src='{{imageControl}}'></image>
+    </view>
+  </view>
+</view>
+
+
+<!-- https://blog.csdn.net/HUSHILIN001/article/details/79742371 -->
