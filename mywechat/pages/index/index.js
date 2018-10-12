@@ -75,7 +75,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.request({
+      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/shop/goods/category/all',
+      success: function (res) {
+        console.log(res)
+      }
+    })
   },
 
   /**

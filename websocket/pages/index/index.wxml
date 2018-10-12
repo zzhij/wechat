@@ -6,6 +6,18 @@
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+    <button bindtap='connect'> 链接websocket </button>
+    <button bindtap='sendData'> 发送数据 </button>
+  </view>
+  <view>
+    <view class='{{flag.tencent > stock.tencent ? "green" : "red"}}'>
+      <text>腾讯 </text>
+      <text>{{stock.tencent}}</text>
+    </view>
+    <view class='{{flag.JD > stock.JD ? "green" : "red"}}'>
+      <text>京东 </text>
+      <text>{{stock.JD}}</text>
+    </view>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>

@@ -1,0 +1,6 @@
+<!--pages/waterfall/waterfall.js.wxml-->
+<text>pages/waterfall/waterfall.js.wxml</text>
+
+<view>
+  <button>请求数据</button>
+</view>

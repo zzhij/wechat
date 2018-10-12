@@ -1,6 +1,8 @@
 {
   "pages":[
+    "pages/start/start",
     "pages/index/index",
+    "pages/waterfall/waterfall",
     "pages/logs/logs"
   ],
   "window":{
@@ -8,5 +10,18 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "websocket"
+    },{
+      "pagePath": "pages/waterfall/waterfall",
+      "text": "request"
+    }]
   }
 }

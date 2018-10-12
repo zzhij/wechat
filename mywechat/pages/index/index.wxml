@@ -45,6 +45,13 @@
       </view>
     </view>
   </view>
+  <view class='type-container'>
+    <scroll-view class='type-navbar' scroll-x="true">
+      <view wx:for='{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}' wx:key='*this' class='type-box'>
+        全部
+      </view>
+    </scroll-view>
+  </view>
 
 </view>
 

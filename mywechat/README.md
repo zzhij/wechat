@@ -3,6 +3,8 @@
 * swiper, image 等组件都有默认宽高
 * 样式规范
 * app.json中 的tabBar的pagePath已经设置的路径  在组件页面中通过navigator跳转时没有反应
+* scroll-view 滑动组件时 一定要加上滑动属性 scroll-x="true"
+* scroll-view 组件上应用flex 布局没有效果 其子元素并不能自动排列
 
 
 

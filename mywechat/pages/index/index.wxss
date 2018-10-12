@@ -70,3 +70,24 @@
 .radio-single-play image {
   width: 24px;
 }
+
+/* 滑动数据 */
+.type-container {
+  width: 100%;
+  height: 86rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.type-navbar {
+  width: 100%;
+  background-color: #fff;
+  white-space: nowrap;
+}
+.type-box {
+  width: 160rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 82rpx;
+  box-sizing: content-box;
+}

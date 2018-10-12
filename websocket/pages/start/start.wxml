@@ -1,0 +1,5 @@
+<!--pages/start/start.wxml-->
+<text>pages/start/start.wxml</text>
+<view>
+  <button bindtap='skipLink'>跳转</button>
+</view>

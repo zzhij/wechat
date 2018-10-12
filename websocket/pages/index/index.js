@@ -2,7 +2,7 @@
 //获取应用实例
 const app = getApp()
 
-Page({
+/* Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
@@ -49,6 +49,54 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  }
+})
+ */
+let socket;
+Page({
+  data: {
+    motto: 'Hello World',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    stock: {
+      JD: 50,
+      tencent: 100
+    },
+    flag: {
+      JD: 50,
+      tencent: 100
+    }
+  },
+  connect() {
+    const _this = this;
+    const socket = wx.connectSocket({
+      url: 'ws://localhost:8080',
+    });
+    /* socket.onMessage( data => { // 可以几首服务器返回的数据
+      console.log(data)
+    }) */
+    wx.onSocketMessage(data => { // 可以几首服务器返回的数据
+      // console.log(JSON.parse(data.data).JD)
+      /* _this.setData({
+        flag: _this.stock
+      }) */
+      _this.setData({
+        flag: this.data.stock,
+        stock:JSON.parse(data.data)
+      })
+      console.log(this.data.stock, this.data.flag)
+    })
+  },
+  sendData() {
+    wx.connectSocket({
+      url: 'ws://localhost:8080',
+    });
+    wx.onSocketOpen( res => {
+      wx.sendSocketMessage({
+        data: ['123'],
+      })
     })
   }
 })
